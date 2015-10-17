@@ -1,2 +1,24 @@
 # Demos
 发邮件、富文本编辑器、html5播放器、等等各种实例的实现
+
+1.运行package com.bruce.test包下的Demo2.java，这里面有2个方法，分别是后天剪切并压缩图片的方法，还有一个是后台纯压缩图片的方法。
+2.运行package com.bruce.test包下的Mails.java，可以运行发邮件实例。
+3.在tomcat下启动项目后，进入fck.jsp会运行fckediter的简单实例
+4.在tomcat下启动项目后，进入upload.jsp会运行多文件上传的简单实例
+5.在tomcat下启动项目后，进入videoJS.jsp会运行video-js视频播放的简单实例
+6..................进入osmplayer.jsp会运行osm-player视频播放的简单实例
+7..................进入miniplayer.jsp会运行miniplayer视频播放的简单实例
+8..................进入flare/index.jsp会运行flare-video视频播放的简单实例
+9.进入index.jsp点击新增，填写信息保存。提示成功。然后 复制      “http://localhost:8181/Demos/SchoolAction/addSchool.action ” 到新的地址栏打开,  提示重复提交表单
+
+10.更新的代码如下，我在别的项目里已经实现了，这个比较简单易懂就不把那个项目复制过来了
+
+          //userProfile操作
+    	    Userprofile oldone= userprofileManager.getUserProfile(id);
+    	   
+    	    BeanUtils.copyProperties(userprofile,oldone, new String[]{"id","user_id","password"});// 复制对象属性值时忽略id,user_Id,password属性，可避免user_Id被恶意修改
+	        userprofileManager.updateUserprofile(oldone);
+	        
+	        页面上不用hidden域    useri_id，password 这个也不会被默认更新成null，主要是spring的beanutils复制了对象属性实现部分字段更新
+	        
+11.进入chart.jsp会演示常见集中统计图的例子，ajax取数据。用的是fushionChart    
